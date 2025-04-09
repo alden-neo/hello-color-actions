@@ -1,13 +1,18 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <title>Hello Color Actions</title>
+</head>
+<body>
   <script src="./hello.js"></script>
   <script>
     var setColor = function () {
       var col = ["red", "green", "purple"];
       var num = Math.floor(Math.random() * 3);
-      var s = `<body bgcolor=  ${col[num]} >`;
-      document.write(s);
-      document.write(`<h1> ${hello()} </h1>`);
+      document.body.style.backgroundColor = col[num];
+      document.body.innerHTML = `<h1> ${hello()} </h1>`;
     };
     window.onload = setColor;
   </script>
+</body>
 </html>
